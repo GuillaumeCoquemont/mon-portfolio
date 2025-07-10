@@ -29,6 +29,7 @@ export default function App(){
           <Route path="/projects/:id" element={<ProjectDetail />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/skills" element={<Skills />} />
+          <Route path="/notfound" element={<NotFound />} />
           {/* Admin route should be protected in a real app */}
           <Route path="/admin" element={<Admin />} />
           <Route path="*" element={<NotFound />} />
