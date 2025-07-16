@@ -17,6 +17,10 @@ export default {
         sans: ['Inter', 'sans-serif'],
         serif: ['Merriweather', 'serif'],
       },
+      spacing: {
+        '100': '25rem', 
+        'margin-top': '100px',
+      },
     },
   },
   plugins: [],
