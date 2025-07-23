@@ -3,11 +3,11 @@ import WhatIDoSection from '../components/Home/WhatIDoSection'
 
 export default function Home() {
   return (
-    <div className="h-screen overflow-y-scroll scrol-smooth snap-none sm:snap-y sm:snap-mandatory">
-      <section className="snap-start h-screen">
+    <div className="h-screen overflow-y-scroll scroll-smooth snap-none sm:snap-y sm:snap-mandatory">
+      <section className="snap-start h-screen px-4 sm:px-8">
         <HeroSection />
       </section>
-      <section className="snap-start h-screen">
+      <section className="snap-start h-screen px-4 sm:px-8">
         <WhatIDoSection />
       </section>
     </div>

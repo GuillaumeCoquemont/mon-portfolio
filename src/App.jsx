@@ -17,12 +17,14 @@ export default function App(){
     <div className="flex flex-col min-h-screen">
       <Navbar />
 
-      <main className="flex-grow px-6 sm:px-10 md:px-14 lg:px-16 xl:px-[100px] bg-white text-darkGray">
+      <main className="flex-grow bg-white text-darkGray">
         <Routes>
-          <Route path="/" element={ 
+          <Route path="/" element={
             <div className="snap-y snap-mandatory h-screen overflow-y-scroll scroll-smooth">
               <Home />
-            </div>} />
+            </div>
+          } />
+            
           <Route path="/about" element={<About />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/projects/:id" element={<ProjectsDetails />} />
