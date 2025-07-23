@@ -1,5 +1,6 @@
 import HeroSection from '../components/Home/HeroSection'
 import WhatIDoSection from '../components/Home/WhatIDoSection'
+import OverviewSection from '../components/Home/OverviewSection'
 
 export default function Home() {
   return (
@@ -9,6 +10,9 @@ export default function Home() {
       </section>
       <section className="snap-start h-screen px-4 sm:px-8">
         <WhatIDoSection />
+      </section>
+      <section className="snap-start h-screen px-4 sm:px-8">
+        <OverviewSection />
       </section>
     </div>
   )
