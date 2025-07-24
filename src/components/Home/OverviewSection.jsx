@@ -6,9 +6,9 @@ export default function OverviewSection() {
       id="overview"
       role="region"
       aria-label="Aperçu de mes compétences et projets"
-      className="min-h-screen snap-start pt-24 flex flex-col justify-center items-center bg-white text-black"
+      className="min-h-[400px] sm:min-h-screen snap-start pt-0 sm:pt-24 flex flex-col justify-center items-center bg-white text-black"
     >
-      <div className="w-full max-w-6xl grid md:grid-cols-2 gap-16 items-center">
+      <div className="w-full max-w-6xl grid md:grid-cols-2 gap-6 items-center">
         <div>
           <h2 className="text-4xl font-bold mb-4 text-green">Aperçu</h2>
         </div>

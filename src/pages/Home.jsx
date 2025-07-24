@@ -1,18 +1,22 @@
 import HeroSection from '../components/Home/HeroSection'
 import WhatIDoSection from '../components/Home/WhatIDoSection'
 import OverviewSection from '../components/Home/OverviewSection'
+import FeaturesProjectsSection from '../components/Home/FeaturesProjectsSection'
 
 export default function Home() {
   return (
     <div className="h-screen overflow-y-scroll scroll-smooth snap-none sm:snap-y sm:snap-mandatory">
-      <section className="snap-start h-screen px-4 sm:px-8">
+      <section className="snap-start sm:h-screen px-4 sm:px-8 pb-10">
         <HeroSection />
       </section>
-      <section className="snap-start h-screen px-4 sm:px-8">
+      <section className="snap-start sm:h-screen px-4 sm:px-8 pb-10">
         <WhatIDoSection />
       </section>
-      <section className="snap-start h-screen px-4 sm:px-8">
+      <section className="snap-start sm:h-screen px-4 sm:px-8 pb-10">
         <OverviewSection />
+      </section>
+      <section className="snap-start sm:h-screen">
+        <FeaturesProjectsSection />
       </section>
     </div>
   )

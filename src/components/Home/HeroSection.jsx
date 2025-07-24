@@ -3,7 +3,7 @@ export default function HeroSection() {
     <section id="hero" 
       role="region" 
       aria-label="Présentation personnelle" 
-      className="min-h-screen snap-start pt-24 flex flex-col lg:flex-row items-center justify-center text-justify">
+      className="min-h-[400px] sm:min-h-screen snap-start pt-24 flex flex-col lg:flex-row items-center justify-center text-justify">
       <div className="max-w-2xl w-full lg:w-2/3">
         <h1 className="text-heading text-center sm:text-left md:text-heading-md font-bold mb-4 leading-tight break-words">
           Hello, je suis <span className="text-green">Guillaume</span>

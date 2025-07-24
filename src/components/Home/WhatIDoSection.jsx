@@ -4,7 +4,7 @@ export default function WhatIDoSection() {
       id="what-i-do"
       role="region"
       aria-label="Ce que je fais / cherche"
-      className="min-h-screen snap-start pt-24 flex flex-col justify-center items-center bg-white text-black"
+      className=" sm:min-h-screen snap-start pt-0 sm:pt-24 flex flex-col justify-center items-center bg-white text-black"
     >
       <div className="w-full max-w-6xl grid md:grid-cols-2 gap-16">
         {/* Bloc 1 - Ce que je fais */}
