@@ -7,23 +7,23 @@ import HobbySection from '../components/Home/HobbySection'
 
 export default function Home() {
   return (
-    <div className="h-screen overflow-y-scroll scroll-smooth snap-none sm:snap-y sm:snap-mandatory">
-      <section className="snap-start sm:h-screen px-4 sm:px-8 pb-10">
+    <div className="scroll-smooth md:snap-y md:snap-mandatory overflow-y-scroll h-screen">
+      <section className="md:snap-start sm:min-h-screen">
         <HeroSection />
       </section>
-      <section className="snap-start sm:h-screen px-4 sm:px-8 pb-10">
+      <section className="md:snap-start sm:min-h-screen px-4 sm:px-8 pb-10">
         <WhatIDoSection />
       </section>
-      <section className="snap-start sm:h-screen px-4 sm:px-8 pb-10">
+      <section className="md:snap-start sm:min-h-screen px-4 sm:px-8 pb-10">
         <OverviewSection />
       </section>
-      <section className="snap-start sm:h-screen">
+      <section className="md:snap-start sm:min-h-screen pb-10">
         <FeaturesProjectsSection />
       </section>
-      <section className="snap-start sm:h-screen px-4 sm:px-8 pb-10">
+      <section className="md:snap-start sm:min-h-screen px-4 sm:px-8 pb-10">
         <ValuesSection />
       </section>
-      <section className="snap-start sm:h-screen px-4 sm:px-8 pb-10">
+      <section className="md:snap-start sm:min-h-screen px-4 sm:px-8 pb-10">
         <HobbySection />
       </section>
     </div>

@@ -1,4 +1,5 @@
-import {Routes, Route} from 'react-router-dom'
+import {Routes, Route, useLocation} from 'react-router-dom'
+import { useEffect } from 'react';
 
 import Navbar from './components/Navbar.jsx'
 import Footer from './components/Footer.jsx'
@@ -13,6 +14,9 @@ import NotFound from './pages/NotFound.jsx'
 import ProjectsDetails from './pages/ProjectsDetails.jsx'
 
 export default function App(){
+  const location = useLocation();
+
+
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar />
@@ -20,9 +24,7 @@ export default function App(){
       <main className="flex-grow bg-white text-darkGray">
         <Routes>
           <Route path="/" element={
-            <div className="snap-y snap-mandatory h-screen overflow-y-scroll scroll-smooth">
-              <Home />
-            </div>
+            <Home />
           } />
             
           <Route path="/about" element={<About />} />
