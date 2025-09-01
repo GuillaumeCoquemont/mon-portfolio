@@ -8,6 +8,7 @@ export default function ContactForm() {
     email: "",
     message: "",
   });
+  const [honeypot, setHoneypot] = useState("");
   const [isSent, setIsSent] = useState(false);
   const [recaptchaToken, setRecaptchaToken] = useState(null);
 
@@ -15,11 +16,20 @@ export default function ContactForm() {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
+    if (name === "website") {
+      setHoneypot(value);
+    } else {
+      setFormData((prev) => ({ ...prev, [name]: value }));
+    }
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    if (honeypot) {
+      console.warn("Bot détecté (honeypot rempli).");
+      return;
+    }
 
     if (!recaptchaToken) {
       alert("Veuillez valider le reCAPTCHA.");
@@ -99,6 +109,16 @@ export default function ContactForm() {
         <div className="pt-4">
           <MyReCAPTCHA onChange={setRecaptchaToken} />
         </div>
+
+        <input
+          type="text"
+          name="website"
+          value={honeypot}
+          onChange={handleChange}
+          className="hidden"
+          tabIndex="-1"
+          autoComplete="off"
+        />
 
         <div className="pt-4">
           <button
