@@ -1,7 +1,11 @@
+import { useState } from "react";
+import VideoModal from "../Modal/VideoModal";
+
+
 const projects = [
         { name: "VéhiDoc", type: "Projet professionnel", description: "Web application de gestion de documents administratifs pour les concessions", image: "assets/images/Logo_VEHIDOC_Web_couleur.webp", 
             tech: "React, Node.js, MySQL, CSS ", link: "https://www.vehidoc.fr" },
-        { name: "Cyna", type: "Projet d'étude", description: "Plateforme web complète (React/Node.js/MySQL) pour la gestion de commandes, services et utilisateurs.", image: "assets/images/project2.png", tech: "React, Node.js, Express", link: "https://www.google.com" },
+        { name: "Cyna", type: "Projet d'étude", description: "Plateforme web complète (React/Node.js/MySQL) pour la gestion de commandes, services et utilisateurs.", image: "assets/images/logo-cyna.webp", tech: "React, Node.js, Express" },
         { name: "Hidéo", type: "Projet personnel", description: "Refonte complète du site de l'entreprise Hidéo (anciennement Idéo-marketing), avec une interface utilisateur moderne et responsive.", image: "assets/images/Logo blanc Hidéo avec baseline.webp", 
             tech: "CMS Wordpress Bricks Builder, CSS, PHP", link: "https://www.hideo.fr" },
         { name: "Location Plouescat", type: "Projet professionnel", description: "Création d'un site vitrine pour la location de gîtes.", image: "assets/images/Location-Plouescat.webp", 
@@ -13,6 +17,7 @@ const searchProjects = (searchTerm) => {
 };
 
 export default function ProjectsGrid() {
+  const [isVideoOpen, setIsVideoOpen] = useState(false);
    
   return (
     <section
@@ -30,11 +35,13 @@ export default function ProjectsGrid() {
               className="group relative bg-green text-white rounded-lg shadow-lg hover:scale-105 transition-transform overflow-hidden"
             >
               {/* Image en haut */}
-              <div className="w-full h-48 overflow-hidden">
+              <div className="w-full h-48 overflow-hidden flex justify-center items-center bg-gray-900">
                 <img
                   src={project.image}
                   alt={project.name}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  className={`object-contain transition-transform duration-300 ${
+                    (project.name === "Cyna" || project.name === "Hidéo") ? "h-32 max-w-[80%]" : "w-full h-full object-cover group-hover:scale-105"
+                  }`}
                 />
               </div>
 
@@ -43,17 +50,28 @@ export default function ProjectsGrid() {
                 <h4 className="text-xl font-bold mb-1">{project.name}</h4>
                 <p className="text-sm italic mb-1">{project.type}</p>
                 <p className="text-sm text-white/80">{project.tech}</p>
-                {project.link && !project.demo && !project.code && (
+                {project.name === "Cyna" ? (
                   <div className="mt-3 flex justify-center">
-                    <a
-                      href={project.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
+                    <button
+                      onClick={() => setIsVideoOpen(true)}
                       className="px-3 py-1 text-sm border border-white rounded hover:bg-white hover:text-green transition"
                     >
-                      Voir le site
-                    </a>
+                      Voir la vidéo
+                    </button>
                   </div>
+                ) : (
+                  project.link && !project.demo && !project.code && (
+                    <div className="mt-3 flex justify-center">
+                      <a
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="px-3 py-1 text-sm border border-white rounded hover:bg-white hover:text-green transition"
+                      >
+                        Voir le site
+                      </a>
+                    </div>
+                  )
                 )}
               </div>
 
@@ -63,16 +81,25 @@ export default function ProjectsGrid() {
               </div>
 
               {/* Lien cliquable sur toute la carte */}
-              <a
-                href={project.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="absolute inset-0"
-              ></a>
+              {project.name === "Cyna" ? (
+                <button
+                  onClick={() => setIsVideoOpen(true)}
+                  className="absolute inset-0"
+                  aria-label="Ouvrir la vidéo de présentation du projet Cyna"
+                ></button>
+              ) : (
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="absolute inset-0"
+                ></a>
+              )}
             </div>
           ))}
         </div>
       </div>
+      <VideoModal isOpen={isVideoOpen} onClose={() => setIsVideoOpen(false)} autoPlay={true} />
     </section>
   );
 }
