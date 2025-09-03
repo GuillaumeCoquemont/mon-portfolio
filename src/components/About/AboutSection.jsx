@@ -154,7 +154,7 @@ export default function AboutSection() {
         </p>
         <div className="mt-10 flex flex-col sm:flex-row sm:justify-center sm:gap-6 gap-4">
           <a
-            href="/CV Guillaume COQUEMONT alternance Développeur Web.pdf"
+            href="/CV_Guillaume_Coquemont.pdf"
             download
             className="inline-block px-6 py-3 bg-green text-white font-medium rounded-lg
               hover:bg-white hover:text-green hover:shadow-lg 
