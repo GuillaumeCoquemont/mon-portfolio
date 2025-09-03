@@ -15,7 +15,6 @@ export default function WhatIDoSection() {
       >
         <h2 className="text-4xl font-bold text-center mb-12 text-green">Mon profil professionnel</h2>
         <div className="w-full max-w-6xl grid md:grid-cols-2 gap-16">
-          {/* Bloc 1 - Ce que je fais */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -70,7 +69,6 @@ export default function WhatIDoSection() {
             </div>
           </motion.div>
 
-          {/* Bloc 2 - Ce que je cherche */}
           <motion.div
             className="md:mt-32 md:items-end"
             initial={{ opacity: 0, y: 40 }}

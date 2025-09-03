@@ -31,7 +31,6 @@ export default function ValuesSection() {
         </motion.p>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {/* Valeur 1 */}
           <motion.div
             className="bg-green/10 p-6 rounded-lg border-l-4 border-green"
             initial={{ opacity: 0, y: 40 }}
@@ -50,7 +49,6 @@ export default function ValuesSection() {
             </p>
           </motion.div>
 
-          {/* Valeur 2 */}
           <motion.div
             className="bg-green/10 p-6 rounded-lg border-l-4 border-green"
             initial={{ opacity: 0, y: 40 }}
@@ -69,7 +67,6 @@ export default function ValuesSection() {
             </p>
           </motion.div>
 
-          {/* Valeur 3 */}
           <motion.div
             className="bg-green/10 p-6 rounded-lg border-l-4 border-green"
             initial={{ opacity: 0, y: 40 }}
@@ -88,7 +85,6 @@ export default function ValuesSection() {
             </p>
           </motion.div>
 
-          {/* Valeur 4 */}
           <motion.div
             className="bg-green/10 p-6 rounded-lg border-l-4 border-green"
             initial={{ opacity: 0, y: 40 }}

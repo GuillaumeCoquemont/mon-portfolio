@@ -48,7 +48,6 @@ export default function Navbar() {
 
       {isOpen && (
         <div className={`fixed top-0 left-0 w-full min-h-screen z-50 flex flex-col transition-all duration-300 ${isOpen ? 'translate-x-0' : 'translate-x-full'} ${scrolled ? 'bg-green text-white' : 'bg-white text-darkGray'}`}>
-          {/* Bouton fermer */}
           <button
             onClick={() => setIsOpen(false)}
             className={`absolute top-4 right-6 w-10 h-10 flex items-center justify-center text-4xl font-light z-10 ${scrolled ? 'text-white' : 'text-green'}`}

@@ -29,10 +29,8 @@ export default function FeaturedProjectsSection() {
       </motion.p>
 
       <div className="w-full max-w-6xl relative">
-        {/* Flèche précédente */}
         <div className="swiper-button-prev !text-white !bg-white/20 !w-12 !h-12 !rounded-full !left-0 !top-1/2 !-translate-y-1/2 hover:!bg-white/30 transition-colors duration-300 after:!text-lg"></div>
         
-        {/* Flèche suivante */}
         <div className="swiper-button-next !text-white !bg-white/20 !w-12 !h-12 !rounded-full !right-0 !top-1/2 !-translate-y-1/2 hover:!bg-white/30 transition-colors duration-300 after:!text-lg"></div>
 
         <Swiper

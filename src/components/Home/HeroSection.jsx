@@ -8,7 +8,6 @@ export default function HeroSection() {
       aria-label="Présentation personnelle"
       className="min-h-screen snap-start grid lg:grid-cols-2 text-black"
     >
-      {/* Colonne gauche - Texte sur fond vert */}
       <motion.div
         className="bg-green text-white flex flex-col justify-center items-center px-8 py-20"
         initial={{ x: -100, opacity: 0 }}
@@ -50,7 +49,6 @@ export default function HeroSection() {
         </div>
       </motion.div>
 
-      {/* Colonne droite - Image sur fond blanc */}
       <motion.div
         className="bg-white flex items-center justify-center p-10"
         initial={{ x: 100, opacity: 0 }}

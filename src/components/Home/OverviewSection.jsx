@@ -22,7 +22,6 @@ export default function OverviewSection() {
       </div>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 w-full max-w-6xl">
-        {/* Bloc 1 - À propos */}
         <motion.div
           className="bg-green p-6 rounded-lg shadow-md flex flex-col justify-between transition-transform transform hover:scale-105 hover:shadow-xl duration-300 ease-in-out"
           initial={{ opacity: 0, y: 40 }}
@@ -46,7 +45,6 @@ export default function OverviewSection() {
           </Link>
         </motion.div>
 
-        {/* Bloc 2 - Projets */}
         <motion.div
           className="bg-green/90 p-6 rounded-lg shadow-md flex flex-col justify-between transition-transform transform hover:scale-105 hover:shadow-xl duration-300 ease-in-out"
           initial={{ opacity: 0, y: 40 }}
@@ -70,7 +68,6 @@ export default function OverviewSection() {
           </Link>
         </motion.div>
 
-        {/* Bloc 3 - Compétences */}
         <motion.div
           className="bg-green/80 p-6 rounded-lg shadow-md flex flex-col justify-between transition-transform transform hover:scale-105 hover:shadow-xl duration-300 ease-in-out"
           initial={{ opacity: 0, y: 40 }}
@@ -94,7 +91,6 @@ export default function OverviewSection() {
           </Link>
         </motion.div>
 
-        {/* Bloc 4 - Contact */}
         <motion.div
           className="bg-green/70 p-6 rounded-lg shadow-md flex flex-col justify-between transition-transform transform hover:scale-105 hover:shadow-xl duration-300 ease-in-out"
           initial={{ opacity: 0, y: 40 }}
