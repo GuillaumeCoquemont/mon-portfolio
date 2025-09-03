@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   const [showPhone, setShowPhone] = useState(false);
@@ -9,10 +10,10 @@ export default function Footer() {
         <div>
           <h3 className="font-semibold mb-2">Navigation</h3>
           <ul className="space-y-1">
-            <li><a href="/" className="hover:underline">Accueil</a></li>
-            <li><a href="#about" className="hover:underline">À propos</a></li>
-            <li><a href="#projects" className="hover:underline">Projets</a></li>
-            <li><a href="#contact" className="hover:underline">Contact</a></li>
+            <li><Link to="/" className="hover:underline">Accueil</Link></li>
+            <li><Link to="/about" className="hover:underline">À propos</Link></li>
+            <li><Link to="/projects" className="hover:underline">Projets</Link></li>
+            <li><Link to="/contact" className="hover:underline">Contact</Link></li>
           </ul>
         </div>
 
@@ -20,7 +21,7 @@ export default function Footer() {
           <h3 className="font-semibold mb-2">Réseaux sociaux</h3>
           <ul className="space-y-1">
             <li>
-              <a href="https://www.linkedin.com/in/guillaumecoquemont/" target="_blank" rel="noopener noreferrer" className="hover:underline">
+              <a href="https://www.linkedin.com/in/guillaume-coquemont/" target="_blank" rel="noopener noreferrer" className="hover:underline">
                 LinkedIn
               </a>
             </li>
