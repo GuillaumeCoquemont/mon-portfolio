@@ -1,9 +1,74 @@
+import { useState } from "react";
+
 export default function Footer() {
+  const [showPhone, setShowPhone] = useState(false);
+
   return (
-    <footer className="bg-gray-800 text-white py-4">
-      <div className="container mx-auto text-center">
-        <p>&copy; {new Date().getFullYear()} Mon Portfolio. All rights reserved.</p>
-        <p>Designed by Guillaume Coquemont</p>
+    <footer className="bg-green border-t border-gray-300 text-white py-4">
+      <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+        <div>
+          <h3 className="font-semibold mb-2">Navigation</h3>
+          <ul className="space-y-1">
+            <li><a href="/" className="hover:underline">Accueil</a></li>
+            <li><a href="#about" className="hover:underline">À propos</a></li>
+            <li><a href="#projects" className="hover:underline">Projets</a></li>
+            <li><a href="#contact" className="hover:underline">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 className="font-semibold mb-2">Réseaux sociaux</h3>
+          <ul className="space-y-1">
+            <li>
+              <a href="https://www.linkedin.com/in/guillaumecoquemont/" target="_blank" rel="noopener noreferrer" className="hover:underline">
+                LinkedIn
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/guillaumecoquemont" target="_blank" rel="noopener noreferrer" className="hover:underline">
+                GitHub
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 className="font-semibold mb-2">Contact</h3>
+          <p>Guillaume Coquemont</p>
+          <p>
+            Email :{" "}
+            <a
+              href="mailto:contact@guillaumecoquemont.fr"
+              className="underline hover:text-lightGray-200 transition"
+            >
+              contact@guillaumecoquemont.fr
+            </a>
+          </p>
+          <div>
+            {!showPhone ? (
+              <button
+                onClick={() => setShowPhone(true)}
+                className="mt-2 text-sm underline text-white hover:text-lightGray-200 transition"
+              >
+                Afficher le numéro de téléphone
+              </button>
+            ) : (
+              <p className="mt-2">
+                Téléphone :{" "}
+                <a
+                  href="tel:0602735516"
+                  className="underline hover:text-lightGray-200 transition"
+                >
+                  06 02 73 55 16
+                </a>
+              </p>
+            )}
+          </div>
+        </div>
+      </div>
+
+      <div className="mt-4 text-center text-sm text-lightGray-600">
+        &copy; {new Date().getFullYear()} Mon Portfolio. Designed by Guillaume Coquemont.
       </div>
     </footer>
   );
